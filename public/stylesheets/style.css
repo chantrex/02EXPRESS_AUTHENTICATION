@@ -1,0 +1,11 @@
+#header img {
+  width: 60px;
+}
+body {
+  padding: 50px;
+  font: 16px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
