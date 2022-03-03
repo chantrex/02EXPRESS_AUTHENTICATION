@@ -1,6 +1,6 @@
 {
-  "name": "assignment1",
-  "version": "0.0.0",
+  "name": "assignment2",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
     "start": "node server.js"
@@ -14,6 +14,19 @@
     "express": "~4.16.1",
     "http-errors": "~1.6.3",
     "jquery": "^3.6.0",
+    "mongoose": "^6.2.4",
     "morgan": "~1.9.1"
-  }
+  },
+  "description": "Express Portfolio – Authentication",
+  "main": "server.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chantrex/02EXPRESS_AUTHENTICATION.git"
+  },
+  "author": "Christopher Chantres",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/chantrex/02EXPRESS_AUTHENTICATION/issues"
+  },
+  "homepage": "https://github.com/chantrex/02EXPRESS_AUTHENTICATION#readme"
 }
