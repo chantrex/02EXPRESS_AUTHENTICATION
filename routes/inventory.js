@@ -3,6 +3,6 @@ let router = express.Router();
 let inventoryController = require ('../controllers/inventory')
 
 
-router.get('/list', inventoryController.list);
+router.get('/contacts', inventoryController.list);
 
 module.exports = router;

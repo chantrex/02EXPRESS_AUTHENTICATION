@@ -1,0 +1,50 @@
+<!--Author: Christopher Chantres
+    Student ID: 301217642
+    Date: March 3, 2022
+ ---> 
+ <% include ../partials/header.ejs %>
+ 
+ <main class="container">
+    <div class="row">
+        <h1><%= title %></h1>
+        <br>
+        <div>
+            <a href="/contacts/add" class="btn btn-primary align-self-end" role="button">
+                <i class="fas fa-plus-circle"></i>
+                Add new Item
+            </a>
+        </div>
+
+        <div class="table-reponsive">
+            <table class="table table-bordered table-striped table-hover">
+                <!-- Header row -->
+                <tr>
+                    <th class="text-center">Name</th>
+                    <th class="text-center">Phone Number</th>
+                    <th class="text-center">E-mail</th>
+                </tr>
+
+                <!-- Repeateble Template Row -->
+
+                <% for(let count = 0; count < ContactsList.length; count++) { %>
+                    <tr>
+                        <td class="text-center"><% ContactsList[count].name %></td>
+                        <td class="text-center"><% ContactsList[count].phoneNumber %></td>
+                        <td class="text-center"><% ContactsList[count].email %></td> 
+                        <td class="text-center">
+                            <a href="/contacts/edit/<%= ContactsList[count]._id %>" class="btn btn-primary btn-sm">
+                                <i class="fas fa-pencil-alt"></i>
+                            </a>
+                        </td>
+                        <td class="text-center">
+                            <a href="/contacts/delete/<%= ContactsList[count]._id %>" class="btn btn-danger btn-sm">
+                                <i class="fas fa-trash-alt"></i>
+                            </a>
+                        </td>
+                    </tr>
+                <% } %>
+            </table>
+        </div>
+    </div>
+ </main>
+ <% include ../partials/footer.ejs %>
