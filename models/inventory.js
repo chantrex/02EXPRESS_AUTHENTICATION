@@ -7,12 +7,12 @@ let inventoryModel = mongoose.Schema(
         item: String,
         qty: Number,
         tags: [],
-        size : {
+        size: {
             h: Number,
             w: Number,
             oum: String
         },
-        status: String
+        status:  String
     },
     {
         collection:  "inventory"

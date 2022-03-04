@@ -1,0 +1,42 @@
+
+try {
+   db.comp229002.bussinessContacts.insertMany( [
+   { name: "Aytar, Atakan ", phoneNumber: "6478867344", email:"aaytar@my.centennialcollege.ca"},
+   { name: "Azevedo de Carvalho, Julio ", phoneNumber: "6470782322", email:"jazeved5@my.centennialcollege.ca"},
+   { name: "Barvadia, Rushin Keshavkumar ", phoneNumber: "6478329827", email:"rbarvadi@my.centennialcollege.ca"},
+   { name: "Chantres Hernandez, Christopher ", phoneNumber: "6474930795", email:"cchantre@my.centennialcollege.ca"},
+   { name: "Cruz Benitez, Angel Fortino ", phoneNumber: "6475329915", email:"acruzben@my.centennialcollege.ca"},
+   { name: "Dhimmar, Kinjalkumari Kishorbhai ", phoneNumber: "6475478382", email:"kdhimmar@my.centennialcollege.ca"},
+   { name: "Dhir, Kanishka ", phoneNumber: "6473140325", email:"kdhir3@my.centennialcollege.ca"},
+   { name: "Genc, Ayse Gul ", phoneNumber: "6479080014", email:"agenc@my.centennialcollege.ca"},
+   { name: "Ghose, Tonmoy", phoneNumber: "6479796076", email:"tghose1@my.centennialcollege.ca"},
+   { name: "Huang, Jin", phoneNumber: "6470143167", email:"jhuan145@my.centennialcollege.ca"},
+   { name: "Hussein, Hussein ", phoneNumber: "6470717462", email:"hhusse11@my.centennialcollege.ca"},
+   { name: "Jiang, Chen ", phoneNumber: "6479714753", email:"cjiang16@my.centennialcollege.ca"},
+   { name: "Kaur, Manpreet ", phoneNumber: "6478620052", email:"mkaur882@my.centennialcollege.ca"},
+   { name: "Khosrawi, Mohammad", phoneNumber: "6475560758", email:"mkhosraw@my.centennialcollege.ca"},
+   { name: "Komatineni, Apoorva ", phoneNumber: "6476632414", email:"akomatin@my.centennialcollege.ca"},
+   { name: "Lau, Wing Yan ", phoneNumber: "6479909036", email:"wlau69@my.centennialcollege.ca"},
+   { name: "Maina, Maina", phoneNumber: "6478325347", email:"cmaina2@my.centennialcollege.ca"},
+   { name: "Makwana, Pratiksinh", phoneNumber: "6475434636", email:"pmakwa13@my.centennialcollege.ca"},
+   { name: "Massa Rebolledo, Stella ", phoneNumber: "6478666726", email:"smassare@my.centennialcollege.ca"},
+   { name: "Mina Trujillo, Joan ", phoneNumber: "6478990767", email:"jminatru@my.centennialcollege.ca"},
+   { name: "Oligane, Martin", phoneNumber: "6470037829", email:"moligan1@my.centennialcollege.ca"},
+   { name: "Pandya, Kaushalkumar Rajeshkumar ", phoneNumber: "6479115906", email:"kpandy33@my.centennialcollege.ca"},
+   { name: "Patel, Meetkumar ", phoneNumber: "6477302937", email:"mpate839@my.centennialcollege.ca"},
+   { name: "Patel, Prit Bhupendrabhai ", phoneNumber: "6479499606", email:"ppate811@my.centennialcollege.ca"},
+   { name: "Peña, Rudolph Clenfer", phoneNumber: "6479444478", email:"ppena1@my.centennialcollege.ca"},
+   { name: "Purohit, Vinit", phoneNumber: "6470539235", email:"vpurohi1@my.centennialcollege.ca"},
+   { name: "Rajput, Mihir", phoneNumber: "6471932665", email:"rrajpu14@my.centennialcollege.ca"},
+   { name: "Regmi, Suraj ", phoneNumber: "6476212590", email:"sregmi3@my.centennialcollege.ca"},
+   { name: "Singh, Parambir ", phoneNumber: "6473648936", email:"psing932@my.centennialcollege.ca"},
+   { name: "Siva Kumar, Pavithran ", phoneNumber: "6475780403", email:"psivak12@my.centennialcollege.ca"},
+   { name: "Song, Sohyeon", phoneNumber: "6470053773", email:"ssong47@my.centennialcollege.ca"},
+   { name: "Souza Vieira, Felipe Vieira", phoneNumber: "6470329265", email:"asouzavi@my.centennialcollege.ca"},
+   { name: "Tang, Sze Man ", phoneNumber: "6474043155", email:"stang66@my.centennialcollege.ca"},
+   { name: "Trivedi, Vikas Bhargav ", phoneNumber: "6475955294", email:"vtrive12@my.centennialcollege.ca"},
+   { name: "Zheng Zheng, Alejandro ", phoneNumber: "6470236895", email:"azhengzh@my.centennialcollege.ca"}
+   ] );
+} catch (e) {
+   print (e);
+}

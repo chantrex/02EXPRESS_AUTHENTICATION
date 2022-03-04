@@ -1,0 +1,60 @@
+<!--Author: Christopher Chantres
+    Student ID: 301217642
+    Date: March 3, 2022
+ ---> 
+ <% include ../partials/header.ejs %>
+ 
+ <main class="container">
+    <div class="row">
+        <h1><%= title %></h1>
+        <br>
+        <div>
+            <a href="/inventory/add" class="btn btn-primary align-self-end" role="button">
+                <i class="fas fa-plus-circle"></i>
+                Add new Item
+            </a>
+        </div>
+
+        <div class="table-reponsive">
+            <table class="table table-bordered table-striped table-hover">
+                <!-- Header row -->
+                <tr>
+                    <th class="text-center">Item</th>
+                    <th class="text-center">Qty</th>
+                    <th class="text-center">Status</th>
+                    <th>Size</th>
+                    <th class="text-center">Tags</th>
+                    <th class="text-center" colspan="2">Actions</th>
+                </tr>
+
+                <!-- Repeateble Template Row -->
+
+                <% for(let count = 0; count < InventoryList.length; count++) { %>
+                    <tr>
+                        <td class="text-center"><% InventoryList[count].item %></td>
+                        <td class="text-center"><% InventoryList[count].qty %></td>
+                        <td class="text-center"><% InventoryList[count].status %></td>
+                        <td><%= InventoryList[count].size.h %></td>
+                        <td>
+                            Hight: <%= InventoryList[count].size.h %><br>
+                            Width: <%= InventoryList[count].size.w %><br>
+                            UOM: <%= InventoryList[count].size.uom %><br>
+                        </td>
+                        <td class="text-center"><%= InventoryList[count].tags %></td>
+                        <td class="text-center">
+                            <a href="/inventory/edit/<%= InventoryList[count]._id %>" class="btn btn-primary btn-sm">
+                                <i class="fas fa-pencil-alt"></i>
+                            </a>
+                        </td>
+                        <td class="text-center">
+                            <a href="/inventory/delete/<%= InventoryList[count]._id %>" class="btn btn-danger btn-sm">
+                                <i class="fas fa-trash-alt"></i>
+                            </a>
+                        </td>
+                    </tr>
+                <% } %>
+            </table>
+        </div>
+    </div>
+ </main>
+ <% include ../partials/footer.ejs %>
