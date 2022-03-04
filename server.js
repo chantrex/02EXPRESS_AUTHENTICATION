@@ -4,7 +4,8 @@
  * Module dependencies.
  */
 
-var app = require('./config/app');
+var dbConfig = require('./config/db.js');
+var appConfig = require('./config/app');
 var debug = require('debug')('assignment1:server');
 var http = require('http');
 
@@ -12,14 +13,15 @@ var http = require('http');
  * Get port from environment and store in Express.
  */
 
+let db = dbConfig();
 var port = normalizePort(process.env.PORT || '3000');
-app.set('port', port);
+appConfig.set('port', port);
 
 /**
  * Create HTTP server.
  */
 
-var server = http.createServer(app);
+var server = http.createServer(appConfig);
 
 /**
  * Listen on provided port, on all network interfaces.
@@ -87,5 +89,5 @@ function onListening() {
     ? 'pipe ' + addr
     : 'port ' + addr.port;
   debug('Listening on ' + bind);
-  console.log(`Express Portfolio at http://localhost:${port}`)
+  console.log(`App is Runnning at http://localhost:${port}`)
 }

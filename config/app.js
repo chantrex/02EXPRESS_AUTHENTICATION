@@ -4,18 +4,6 @@ let path = require('path');
 let cookieParser = require('cookie-parser');
 let logger = require('morgan');
 
-// Database Setup
-let mongoose = require('mongoose');
-let dbURI = require('../config/db');
-
-// Conenct to the DB
-mongoose.connect(dbURI.DB_CONNECTION);
-
-let mongoDB = mongoose.connection;
-mongoDB.on('error', console.error.bind(console, 'Connection Error: '));
-mongoDB.once('open', ()=>{
-  console.log('Connected to MongoDb....');
-})
 
 //Get the route modules
 let indexRouter = require('../routes/index');
