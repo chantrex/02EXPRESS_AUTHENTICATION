@@ -9,7 +9,6 @@ exports.list = function (req, res, next){
             return console.error(err);
         }
         else{
-            // console.log(contactsList);
             res.render(
                 'contacts/list',
                  {
@@ -19,6 +18,37 @@ exports.list = function (req, res, next){
             );
         }
     });
+}
 
-   // res.render('index', { title: 'About' });
+
+module.exports.displayAddPage = (req, res, next) => {
+    let newContact = Contacts();
+
+    res.render('contacts/add_edit', {
+        title: 'Add a new Business Contact',
+     Contacts: newContact
+    })
+}
+
+module.exports.processAddPage = (req, res, next) => {
+
+    let newContact = Contacts({
+        _id: req.body.id,
+        name: req.body.name,
+        phoneNumber: req.body.phoneNumber,
+        email: req.body.email
+    });
+
+
+    Contacts.create(newContact, (err, contac) => {
+        if(err){
+            console.log(err);
+            res.end(err);
+        }
+        else
+        {
+            //refresh the business list
+            res.redirect('contacts/list');
+        }
+    });
 }
