@@ -4,6 +4,8 @@
  ---> 
  <% include ../partials/header.ejs %>
  
+
+ <!-- Main content -->
  <main class="container">
     <div class="row">
         <h1><%= title %></h1>
@@ -11,7 +13,7 @@
         <div>
             <a href="/contacts/add" class="btn btn-primary align-self-end" role="button">
                 <i class="fas fa-plus-circle"></i>
-                Add new Item
+                Add new Contact
             </a>
         </div>
 
@@ -32,7 +34,7 @@
                         <td class="text-center"><%= ContactsList[count].phoneNumber %></td>
                         <td class="text-center"><%= ContactsList[count].email %></td> 
                         <td class="text-center">
-                            <a href="/contacts/add_edit/<%= ContactsList[count]._id %>" class="btn btn-primary btn-sm">
+                            <a href="/contacts/edit/<%= ContactsList[count]._id %>" class="btn btn-primary btn-sm">
                                 <i class="fas fa-pencil-alt"></i> Edit
                             </a>
                         </td>

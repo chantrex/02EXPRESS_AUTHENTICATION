@@ -17,4 +17,7 @@ router.get('/about',indexController.about);
 /* GET contact me page. */
 router.get('/contact',indexController.contact);
 
+/* GET Sing-in page. */
+router.get('/signin',indexController.signin);
+
 module.exports = router;

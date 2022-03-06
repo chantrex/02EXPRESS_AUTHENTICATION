@@ -1,4 +1,5 @@
 let Contacts = require('../models/contacts');
+const inventory = require('../models/inventory');
 
 exports.list = function (req, res, next){
     
@@ -22,11 +23,12 @@ exports.list = function (req, res, next){
 
 
 module.exports.displayAddPage = (req, res, next) => {
+   
     let newContact = Contacts();
 
     res.render('contacts/add_edit', {
         title: 'Add a new Business Contact',
-     Contacts: newContact
+        contacts: newContact
     })
 }
 
@@ -40,7 +42,7 @@ module.exports.processAddPage = (req, res, next) => {
     });
 
 
-    Contacts.create(newContact, (err, contac) => {
+    Contacts.create(newContact, (err, contacts) => {
         if(err){
             console.log(err);
             res.end(err);
@@ -48,7 +50,68 @@ module.exports.processAddPage = (req, res, next) => {
         else
         {
             //refresh the business list
-            res.redirect('contacts/list');
+            console.log(contacts);
+            res.redirect('/contacts/list');
         }
     });
 }
+
+
+module.exports.displayEditPage = (req, res, next) => {
+    let _id = req.params.id;
+    Contacts.findById(id, (err, movie) => {
+      if (err) 
+      {
+        console/log(err);
+        res.end(err);
+      } 
+      else
+       {
+        res.render("contacts/add_edit", {
+            title: "Edit Contact",
+            contacts: contactToEdit,
+        });
+      }
+    });
+  };
+  
+  module.exports.processEditPage = (req, res, next) => {
+    let id = req.params.id
+
+    let updateContact = Contacts({
+        _id: req.body.id,
+        name: req.body.name,
+        phoneNumber: req.body.phoneNumber,
+        email: req.body.email
+    });
+  
+
+  inventory.updateOne({_id: id}, updateContact, (err) => {
+        if (err) 
+        {
+            console.log(err);
+            res.end(err);
+        }
+        else
+        {
+            res.redirect("/contacts/list");
+        }
+     });
+}  
+
+
+module.exports.performDelete = (req, res, next) => {
+    let id = req.params.id;
+  
+    Contacts.remove({ _id: id }, (err) => {
+      if (err) 
+      {
+        console.log(err);
+        res.end(err);
+      }
+      else
+      {
+        res.redirect("/contacts/list");
+      }
+    });
+};

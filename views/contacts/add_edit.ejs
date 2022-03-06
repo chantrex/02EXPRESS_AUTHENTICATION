@@ -14,14 +14,14 @@
             <div class="form-group">
                 <input type="hidden"
                     name="id"
-                    value="<%= Contacts._id %>"
+                    value="<%= contacts._id %>"
                 >
                 <label for="nameTextField">Name</label>
                 <input type="text" class="form-control"
                 id="nameTextField"
                 placeholder="Edit Business Contact Name"
                 name="name"
-                value="<%= Contacts.name %>"
+                value="<%= contacts.name %>"
                  required>
             </div>
             <br />
@@ -31,30 +31,29 @@
                 id="numberTextField"
                 placeholder="Enter Business Contact Number"
                 name="phoneNumber"
-                value="<%= Contacts.phoneNumber %>"
+                value="<%= contacts.phoneNumber %>"
                 required>
-            </div>
             </div>
             <div class="form-group">
                 <label for="emailTextField"> E-mail Address</label>
-                <input type="email" class="form-text text-muted"
+                <input type="email" class="form-control"
                         id="emailTextField"
                         placeholder="Enter email"
                         aria-describedby="emailHelp"
                         name="email"
-                        value="<%= Contacts.email %>"
+                        value="<%= contacts.email %>"
                         required>
             </div>
-
+            <br />
             <button class="btb btn-primary" type="submit">
                 <i class="fas fa-edit"></i>Submit
            </button>
-    
            <a href="/contacts/edit" class="btn btn-warning">
                <i class="fas fa-undo"></i> 
                Cancel
            </a>
-    
+           <br />
+           <br />
         </form>
     </div>
     </div>

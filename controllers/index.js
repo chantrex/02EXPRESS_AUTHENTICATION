@@ -17,3 +17,7 @@ exports.about =  function(req, res, next) {
 exports.contact =  function(req, res, next) {
     res.render('contact', { title: 'Contact me!' });
 }  
+
+exports.signin =  function(req, res, next) {
+    res.render('signin', { title: 'Sign-in' });
+ }

@@ -32,6 +32,9 @@ app.use('/contacts', contactsRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
+  res.status(404).send('Sorry cant find that!');
+});
+app.use(function(req, res, next) {
   next(createError(404));
 });
 
