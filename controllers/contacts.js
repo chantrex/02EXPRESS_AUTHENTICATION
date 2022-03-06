@@ -1,4 +1,8 @@
-let Contacts = require('../models/contacts');
+
+// <!--Author: Christopher Chantres
+// Student ID: 301217642
+// Date: Mar 2, 2022
+// ---> let Contacts = require('../models/contacts');
 const inventory = require('../models/inventory');
 
 exports.list = function (req, res, next){
